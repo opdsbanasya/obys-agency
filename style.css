@@ -13,7 +13,7 @@
     box-sizing: border-box;
     font-family: 'plain Light';
     color: #fff;
-    ;
+    
 }
 
 html,
@@ -44,6 +44,7 @@ main {
     background: #0B0B0B;
     z-index: 99;
     padding: 25vh 10vw;
+    display: none;
 }
 
 .line {
@@ -226,9 +227,77 @@ main {
     min-height: 100vh;
     width: 100%;
     background: #111;
+    position: relative;
+    overflow-x: hidden;
 }
 #page4-content{
     width: 72vw;
+    min-height: 100%;
     position: relative;
     margin-left: 28%;
+    padding: 4vw 0;
 }
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1vw 0;
+}
+.underline{
+    width: 65vw;
+    border-top:1px solid #fff;
+}
+#page4-content>p{
+    font-size: 2.5vw;
+    width: 55%;
+    margin-top: 4vw;
+    
+}
+#page4-flex{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 4vw;
+    gap: 3vw;
+}
+#page4-flex img{
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+}
+#page4-flex>p{
+    width: 26%;
+    height: 100%;
+    font-size: 1vw;
+    line-height: 1.7;
+}
+
+#page4-outer{
+    width: 42vw;
+    position: absolute;
+    bottom: -20%;
+    right: 5%;
+    margin-left: 28%;
+    padding: 4vw 0;
+    background: #3F7DF4;
+    padding: 4vw;
+}
+#page4-outer section{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+    padding: 1.4vw 0vw;
+    border-bottom: 1px solid #fff;
+}
+#page4-outer section h2{
+    width: 40%;
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+#page4-outer section h5{
+    font-size: 1vw;
+    font-weight: 500;
+}
+

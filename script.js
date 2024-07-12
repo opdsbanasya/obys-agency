@@ -60,3 +60,12 @@ const cursurAnimation = () => {
     Shery.makeMagnet("#nav-part2 h3");
 }
 cursurAnimation();
+
+gsap.from(".underline",{
+    x:100,
+    opacity:0,
+    scrollTrigger:{
+        trigger:".underline",
+        start:"top 90%",
+    }
+})
