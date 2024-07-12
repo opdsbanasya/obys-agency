@@ -41,3 +41,4 @@ const loadingAnimation = () => {
         display: "none",
     })
 }
+// loadingAnimation();
