@@ -13,7 +13,6 @@
     box-sizing: border-box;
     font-family: 'plain Light';
     color: #fff;
-    
 }
 
 html,
@@ -25,7 +24,7 @@ body {
 main {
     position: relative;
     background: #030303;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 #crsr{
@@ -45,7 +44,6 @@ main {
     background: #0B0B0B;
     z-index: 99;
     padding: 25vh 10vw;
-    display: none;
 }
 
 .line {
@@ -125,6 +123,13 @@ main {
     padding: 7vh 5.5vw;
     position: relative;
 }
+#logo{
+    height: 2vw;
+}
+#logo img{
+    height: 100%;
+    margin-right: 2vw;
+}
 #nav-part1{
     position: absolute;
     left: 30%;
@@ -163,7 +168,14 @@ main {
     font-weight: 600;
     line-height: 7vw;
 }
-
+#hero1::before{
+    content: '01';
+    font-size: 3vw;
+    font-family: 'silk serif';
+    position: absolute;
+    top: 10%;
+    left: -12%;
+}
 #hero3 h1 span{
     text-decoration: underline;
     transition: all 0.5s ease;
@@ -201,6 +213,7 @@ main {
     object-fit: cover;
     position: absolute;
     top: 0;
+    overflow: hidden;
 }
 #video-crsr{
     height: 10vw;
@@ -208,7 +221,7 @@ main {
     border-radius: 50%;
     background: #FFA63D;
     position: absolute;
-    top: -10%;
+    top: 10%;
     left:68%;
     z-index: 999;
     display: flex;
@@ -244,6 +257,15 @@ main {
     text-transform: uppercase;
     font-weight: 600;
     padding: 1vw 0;
+    position: relative;
+}
+#page4-content h1::before{
+    content: '03';
+    font-size: 3vw;
+    font-family: 'silk serif';
+    position: absolute;
+    top: 12%;
+    left: -12%;
 }
 .underline{
     width: 65vw;
@@ -366,10 +388,26 @@ footer{
     padding: 4vw 0;
 }
 footer h1{
+    height: 10vw;
     font-size: 7.4vw;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 1vw;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+footer h1::before{
+    content: '04';
+    font-size: 3vw;
+    font-family: 'silk serif';
+    position: absolute;
+    top: 10%;
+    left: -12%; 
+}
+footer h1 svg{
+    height: 6vw;
+    margin-left: 2.4vw;
 }
 footer h1:hover{
     font-family: 'silk serif';
