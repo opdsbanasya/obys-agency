@@ -21,7 +21,10 @@ tl.from("#line1-part1, .line h2", {
         }, 35)
     }
 })
-
+tl.to(".line h2",{
+    animationName: "now",
+    opacity: 1,
+})
 tl.to("#loader", {
     opacity: 0,
     duration: 0.2,

@@ -63,7 +63,7 @@ main {
     animation-name: now;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-
+    opacity: 0;
 }
 @keyframes now {
     0%{
