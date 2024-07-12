@@ -23,8 +23,7 @@ body {
 
 main {
     position: relative;
-    background: #030303;
-    overflow: hidden;
+    background: #111;
 }
 
 #crsr{
@@ -168,13 +167,14 @@ main {
     font-weight: 600;
     line-height: 7vw;
 }
+
 #hero1::before{
     content: '01';
     font-size: 3vw;
     font-family: 'silk serif';
     position: absolute;
     top: 10%;
-    left: -12%;
+    left: -10%;
 }
 #hero3 h1 span{
     text-decoration: underline;
