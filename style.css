@@ -25,6 +25,7 @@ body {
 main {
     position: relative;
     background: #030303;
+    overflow-x: hidden;
 }
 
 #crsr{
@@ -223,6 +224,7 @@ main {
     width: 100%;
     background: #000;
 }
+
 #page4{
     min-height: 100vh;
     width: 100%;
@@ -280,9 +282,9 @@ main {
     bottom: -20%;
     right: 5%;
     margin-left: 28%;
-    padding: 4vw 0;
+    padding: 4vw ;
     background: #3F7DF4;
-    padding: 4vw;
+    
 }
 #page4-outer section{
     display: flex;
@@ -300,4 +302,102 @@ main {
     font-size: 1vw;
     font-weight: 500;
 }
+#work-with{
+    padding-top: 22vw;
+    width: 72vw;
+    position: relative;
+    margin-left: 28%;
+}
+#work-with h5{
+    font-size: 1vw;
+    font-weight: 500;
+    margin-top: 1vw;
+}
+#page5{
+    width: 200%;
+    min-height: 100vh;
+    position: relative;
+    background: #111;
+    padding: 4vw 0;
+}
+.elem{
+    white-space: nowrap;
+    margin-bottom: -3vw;
+}
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    color:transparent;
+    display: inline-block;
+    margin-right: 16px; 
+    animation-name: anime;
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+.elem:nth-child(2n) h1{
+    transform: translateX(calc(-100% - 20px));
+    animation-direction: reverse;
+}
+@keyframes anime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem h1 span{
+    font-family: 'silk serif';
+    color:transparent
+}
+footer{
+    width: 100%;
+    height: 100vh;
+    background: #111;
+}
 
+#footer-content{
+    width: 72vw;
+    position: relative;
+    margin-left: 28%;
+    padding: 4vw 0;
+}
+footer h1{
+    font-size: 7.4vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1vw;
+}
+footer h1:hover{
+    font-family: 'silk serif';
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+}
+#info{
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 2.5vw;
+    margin-bottom: 4vw;
+
+}
+.info-elem h4{
+    margin-bottom: 2vw;
+    font-weight: 500;
+    font-size: 1.1vw;
+}
+.info-elem h5{
+    margin-bottom: 2vw;
+    font-weight: 500;
+    font-size: 2vw;
+}
+#footer-content>h3{
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin-top: 2.5vw;
+}
