@@ -30,7 +30,6 @@ const locomotiveAnimation = () => {
     // After everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
     ScrollTrigger.refresh();
 }
-locomotiveAnimation();
 
 const loadingAnimation = () => {
     let tl = gsap.timeline()
@@ -38,7 +37,7 @@ const loadingAnimation = () => {
         y: 150,
         stagger: 0.2,
         duration: 0.6,
-        delay: 0, // 0.5
+        delay: 0.5,
     })
     tl.from("#line1-part1, .line h2", {
         opacity: 0,
@@ -61,7 +60,7 @@ const loadingAnimation = () => {
     tl.to("#loader", {
         opacity: 0,
         duration: 0.2,
-        delay: 0, // 4 krna h
+        delay: 4,
     })
     tl.from("#page1", {
         delay: 0.2, // 0.2
@@ -83,12 +82,10 @@ const loadingAnimation = () => {
         opacity: 0,
     }, "-=1.2")
 }
-// loadingAnimation();
-
 
 const cursurAnimation = () => {
     Shery.mouseFollower({
-        skew:true,
+        skew: true,
         ease: "cubic-bezier(0.23,1,0.320,1",
         duration: 1,
     })
@@ -96,52 +93,51 @@ const cursurAnimation = () => {
     Shery.makeMagnet("#logo img");
     const videoCont = document.querySelector("#video-container")
     const video = document.querySelector("#video-container video");
-    videoCont.addEventListener("mouseenter",()=>{
-        videoCont.addEventListener("mousemove",(dets)=>{
-            gsap.to(".mouseFollower",{
-                opacity:0,
+    videoCont.addEventListener("mouseenter", () => {
+        videoCont.addEventListener("mousemove", (dets) => {
+            gsap.to(".mouseFollower", {
+                opacity: 0,
             })
-            gsap.to("#video-crsr",{
-                left:dets.x,
-                top:dets.y,
+            gsap.to("#video-crsr", {
+                left: dets.x,
+                top: dets.y,
             })
         })
     });
-    videoCont.addEventListener("mouseleave",()=>{
-            gsap.to(".mouseFollower",{
-                opacity:1,
-            })
-            gsap.to("#video-crsr",{
-                left:"69.5%",
-                top:"15%",
-            })
-        
+    videoCont.addEventListener("mouseleave", () => {
+        gsap.to(".mouseFollower", {
+            opacity: 1,
+        })
+        gsap.to("#video-crsr", {
+            left: "69.5%",
+            top: "15%",
+        })
+
     });
 
 
 
     var flag = 0;
-    videoCont.addEventListener("click",()=>{
-        if(flag == 0){
+    videoCont.addEventListener("click", () => {
+        if (flag == 0) {
             video.play();
             video.style.opacity = 1;
             document.querySelector("#video-crsr").innerHTML = '<i class="ri-pause-mini-line"></i>'
-            gsap.to("#video-crsr",{
-                scale:0.5,
+            gsap.to("#video-crsr", {
+                scale: 0.5,
             })
             flag = 1;
-        } else{
+        } else {
             video.pause();
             video.style.opacity = 0;
             document.querySelector("#video-crsr").innerHTML = '<i class="ri-play-mini-line"></i>'
-            gsap.to("#video-crsr",{
-                scale:1,
+            gsap.to("#video-crsr", {
+                scale: 1,
             })
             flag = 0;
         }
     })
 }
-cursurAnimation();
 
 const scrollAnimation = () => {
     gsap.from(".underline", {
@@ -150,10 +146,9 @@ const scrollAnimation = () => {
         scrollTrigger: {
             trigger: ".underline",
             scroller: "main",
-            markers: true,
             start: "top 50%",
-            stagger:0.2,
-        }    
+            stagger: 0.2,
+        }
     });
     gsap.from(".projectBoxUnderline", {
         x: 100,
@@ -161,42 +156,47 @@ const scrollAnimation = () => {
         scrollTrigger: {
             trigger: ".underline",
             scroller: "main",
-            markers: true,
-            stagger:0.2,
+            stagger: 0.2,
             start: "top 10%",
         }
     });
 };
-scrollAnimation();
 
 const sheryAnimation = () => {
     Shery.imageEffect(".image-div", {
         style: 6,
         // debug: true,
         config: { "noiseDetail": { "value": 8.4, "range": [0, 100] }, "distortionAmount": { "value": 3.44, "range": [0, 10] }, "scale": { "value": 36.36, "range": [0, 100] }, "speed": { "value": 1, "range": [0, 1] }, "zindex": { "value": -9996999, "range": [-9999999, 9999999] }, "aspect": { "value": 0.7272695760684946 }, "ignoreShapeAspect": { "value": true }, "shapePosition": { "value": { "x": 0, "y": 0 } }, "shapeScale": { "value": { "x": 0.5, "y": 0.5 } }, "shapeEdgeSoftness": { "value": 0, "range": [0, 0.5] }, "shapeRadius": { "value": 0, "range": [0, 2] }, "currentScroll": { "value": 0 }, "scrollLerp": { "value": 0.07 }, "gooey": { "value": true }, "infiniteGooey": { "value": false }, "growSize": { "value": 4, "range": [1, 15] }, "durationOut": { "value": 1, "range": [0.1, 5] }, "durationIn": { "value": 1.5, "range": [0.1, 5] }, "displaceAmount": { "value": 0.5 }, "masker": { "value": false }, "maskVal": { "value": 1.15, "range": [1, 5] }, "scrollType": { "value": 0 }, "geoVertex": { "range": [1, 64], "value": 1 }, "noEffectGooey": { "value": true }, "onMouse": { "value": 0 }, "noise_speed": { "value": 0.76, "range": [0, 10] }, "metaball": { "value": 0.41, "range": [0, 2] }, "discard_threshold": { "value": 0.6, "range": [0, 1] }, "antialias_threshold": { "value": 0, "range": [0, 0.1] }, "noise_height": { "value": 0.44, "range": [0, 2] }, "noise_scale": { "value": 16.03, "range": [0, 100] } },
-        
+
         gooey: true,
     });
 }
-sheryAnimation();
 
-document.addEventListener("mousemove",(dets)=>{
-    gsap.to("#flag",{
-        x:dets.x,
-        y:dets.y,
+const flagAnimation = ()=>{
+    document.addEventListener("mousemove", (dets) => {
+        gsap.to("#flag", {
+            x: dets.x,
+            y: dets.y,
+        })
     })
-})
-document.querySelector("#hero3").addEventListener("mouseenter",(dets)=>{
-    gsap.to("#flag",{
-        x:dets.x,
-        y:dets.y,
-        opacity:1,
+    document.querySelector("#hero3").addEventListener("mouseenter", (dets) => {
+        gsap.to("#flag", {
+            x: dets.x,
+            y: dets.y,
+            opacity: 1,
+        })
     })
-})
-document.querySelector("#hero3").addEventListener("mouseleave",(dets)=>{
-    gsap.to("#flag",{
-        x:dets.x,
-        y:dets.y,
-        opacity:0,
+    document.querySelector("#hero3").addEventListener("mouseleave", (dets) => {
+        gsap.to("#flag", {
+            x: dets.x,
+            y: dets.y,
+            opacity: 0,
+        })
     })
-})
+}
+locomotiveAnimation();
+loadingAnimation();
+cursurAnimation();
+scrollAnimation();
+sheryAnimation();
+flagAnimation();

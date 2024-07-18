@@ -39,7 +39,6 @@ main {
     background: #0B0B0B;
     z-index: 99;
     padding: 25vh 10vw;
-    display: none;
 }
 
 .line {
