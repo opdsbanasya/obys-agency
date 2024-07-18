@@ -328,7 +328,6 @@ main {
 .image-div {
     height: 80%;
     width: 100%;
-    /* background: lightblue; */
     position: relative;
     overflow: hidden;
 }

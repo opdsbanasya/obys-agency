@@ -143,14 +143,31 @@ const cursurAnimation = () => {
 }
 cursurAnimation();
 
-gsap.from(".underline", {
-    x: 100,
-    opacity: 0,
-    scrollTrigger: {
-        trigger: ".underline",
-        start: "top 90%",
-    }
-})
+const scrollAnimation = () => {
+    gsap.from(".underline", {
+        x: 100,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".underline",
+            scroller: "main",
+            markers: true,
+            start: "top 50%",
+            stagger:0.2,
+        }    
+    });
+    gsap.from(".projectBoxUnderline", {
+        x: 100,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".underline",
+            scroller: "main",
+            markers: true,
+            stagger:0.2,
+            start: "top 10%",
+        }
+    });
+};
+scrollAnimation();
 
 const sheryAnimation = () => {
     Shery.imageEffect(".image-div", {
