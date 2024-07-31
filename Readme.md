@@ -15,6 +15,5 @@ I learned how to add animations to a website using JavaScript libraries like ```
 - ScrollTrigger
 - Three.js
 
-### Author
-- [Dharm Singh]('https://www.linkedin.com/in/dharm-singh-saini/')
+
 
