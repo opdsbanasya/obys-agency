@@ -195,7 +195,7 @@ const flagAnimation = ()=>{
     })
 }
 locomotiveAnimation();
-// loadingAnimation();
+loadingAnimation();
 cursurAnimation();
 scrollAnimation();
 sheryAnimation();
